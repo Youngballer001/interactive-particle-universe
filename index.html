@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive particle universe made with HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#070914">
+  <title>Particle Universe</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <canvas id="universe" aria-label="Interactive animated particle universe"></canvas>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">✳</span> PARTICLE<span class="brand-light">VERSE</span></a>
+      <span class="live-status"><i></i> SIMULATION ACTIVE</span>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">AN INTERACTIVE CANVAS EXPERIMENT</p>
+      <h1>Explore the <span>invisible.</span></h1>
+      <p class="intro">A tiny universe of particles, connections and motion. Move your pointer through the field and see what happens.</p>
+      <p class="hint">⌖ Move your pointer · Click to create a burst</p>
+    </section>
+    <aside class="control-panel" aria-label="Simulation controls">
+      <div class="panel-heading">
+        <div><p class="eyebrow">CONTROL DECK</p><h2>Universe settings</h2></div>
+        <button id="reset-button" class="reset-button" type="button">RESET ↺</button>
+      </div>
+      <div class="control">
+        <div class="control-label"><label for="particle-count">Particle density</label><output id="particle-count-value">100</output></div>
+        <input id="particle-count" type="range" min="30" max="220" value="100" step="10">
+      </div>
+      <div class="control">
+        <div class="control-label"><label for="connection-distance">Connection distance</label><output id="connection-distance-value">120 px</output></div>
+        <input id="connection-distance" type="range" min="50" max="220" value="120" step="10">
+      </div>
+      <div class="control-row">
+        <label for="motion-toggle">Particle motion</label>
+        <button id="motion-toggle" class="switch is-on" type="button" role="switch" aria-checked="true"><span></span><b>ON</b></button>
+      </div>
+      <div class="control-row">
+        <label for="pointer-toggle">Pointer interaction</label>
+        <button id="pointer-toggle" class="switch is-on" type="button" role="switch" aria-checked="true"><span></span><b>ON</b></button>
+      </div>
+      <div class="panel-footer">
+        <span>PARTICLES <strong id="particle-total">100</strong></span>
+        <span>FPS <strong id="fps">--</strong></span>
+      </div>
+    </aside>
+    <footer class="page-footer"><span>BUILT WITH CANVAS API + VANILLA JAVASCRIPT</span><span>EXPERIMENT <b>02 / 15</b></span></footer>
+  </main>
+</body>
+</html>
